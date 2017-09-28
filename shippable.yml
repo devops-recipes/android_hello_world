@@ -13,7 +13,6 @@ build:
     ### To install the Android SDK yourself
     - wget https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip
     - unzip sdk-tools-linux-3859397.zip -d $ANDROID_HOME
-    # - mkdir -p $ANDROID_HOME/licenses
     - yes | $ANDROID_SDK/sdkmanager --licenses
     - gradle tasks
 
