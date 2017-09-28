@@ -1,0 +1,16 @@
+language: java
+
+jdk:
+  - oraclejdk8
+
+env:
+  global:
+    - ANDROID_HOME=/opt/android-sdk
+
+build:
+  ci:
+    - PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin
+    - wget -O android-sdk.zip https://dl.google.com/android/repository/tools_r25.2.5-linux.zip
+    - unzip -a android-sdk.zip
+    - mv /tools $ANDROID_HOME/tools
+    - gradle tasks
