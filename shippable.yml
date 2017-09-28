@@ -14,9 +14,9 @@ build:
     - echo "sdk license"
     - printenv | grep "$ANDROID"
     - echo $ANDROIDLICENSES_INTEGRATION_ANDROID_SDK_LICENSE
-    - echo -e "\n${ANDROIDLICENSES_INTEGRATION_ANDROID_SDK_LICENSE}" > "$ANDROID_HOME/licenses/android-sdk-license"
-    - echo -e "\n${ANDROIDLICENSES_INTEGRATION_ANDROID_SDK_PREVIEW_LICENSE}" > "$ANDROID_HOME/licenses/android-sdk-preview-license"
-    - echo -e "\n${ANDROIDLICENSES_INTEGRATION_INTEL_ANDROID_EXTRA_LICENSE}" > "$ANDROID_HOME/licenses/intel-android-extra-license"
+    - echo -e "\n${android_sdk_license}" > "$ANDROID_HOME/licenses/android-sdk-license"
+    - echo -e "\n${sdk_preview_license}" > "$ANDROID_HOME/licenses/android-sdk-preview-license"
+    - echo -e "\n${intel_android_extra_license}" > "$ANDROID_HOME/licenses/intel-android-extra-license"
     - ls ${ANDROID_HOME}/licenses
     - cat ${ANDROID_HOME}/licenses/android-sdk-license
     # - wget -nv -O android-sdk.zip https://dl.google.com/android/repository/tools_r25.2.5-linux.zip
