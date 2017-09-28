@@ -7,12 +7,23 @@ env:
   global:
     - ANDROID_HOME=/opt/android-sdk
     - ANDROID_SDK=/opt/android-sdk/tools/bin
+    - SDK_DOWNLOAD=https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip
 
 build:
   ci:
-    - mkdir -p $ANDROID_HOME/licenses
+    ### To install the Android SDK yourself
+    - wget https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip
+    - unzip sdk-tools-linux-3859397.zip -d $ANDROID_HOME
+    # - mkdir -p $ANDROID_HOME/licenses
     - yes | $ANDROID_SDK/sdkmanager --licenses
+    - gradle tasks
+
+    ### To have Gradle automatically install the Android SDK, you must inject 
+    ### existing licenses. These can be passed in as an INPUT via a Shippable 
+    ### 'integration' resource to this CI job. See shippable.resources.yml and 
+    ### shippable.jobs.yml in this repo to see how to configure that.
+    ### use the following CI instructions for this method.
     # - echo -e "\n${android_sdk_license}" > "$ANDROID_HOME/licenses/android-sdk-license"
     # - echo -e "\n${sdk_preview_license}" > "$ANDROID_HOME/licenses/android-sdk-preview-license"
     # - echo -e "\n${intel_android_extra_license}" > "$ANDROID_HOME/licenses/intel-android-extra-license"
-    - gradle tasks
+    # - gradle tasks
