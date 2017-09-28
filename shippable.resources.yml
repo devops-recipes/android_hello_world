@@ -1,0 +1,4 @@
+resources:
+  - name: android-licenses
+    type: integration
+    integration: android-licenses

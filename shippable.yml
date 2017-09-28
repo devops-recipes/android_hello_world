@@ -10,7 +10,10 @@ env:
 
 build:
   ci:
-    - mkdir /opt/android-sdk
+    - mkdir -p $ANDROID_HOME/licenses
+    - echo -e "\n${ANDROIDLICENSES_INTEGRATION_ANDROID_SDK_LICENSE}" > "$ANDROID_HOME/licenses/android-sdk-license"
+    - echo -e "\n${ANDROIDLICENSES_INTEGRATION_ANDROID_SDK_PREVIEW_LICENSE}" > "$ANDROID_HOME/licenses/android-sdk-license"
+    - echo -e "\n${ANDROIDLICENSES_INTEGRATION_INTEL_ANDROID_EXTRA_LICENSE}" > "$ANDROID_HOME/licenses/android-sdk-license"
     # - wget -nv -O android-sdk.zip https://dl.google.com/android/repository/tools_r25.2.5-linux.zip
     # - unzip -a android-sdk.zip
     # - mv tools $ANDROID_HOME/tools
