@@ -11,6 +11,9 @@ env:
 build:
   ci:
     - mkdir -p $ANDROID_HOME/licenses
+    - echo "sdk license"
+    - printenv | grep "$ANDROID"
+    - echo $ANDROIDLICENSES_INTEGRATION_ANDROID_SDK_LICENSE
     - echo -e "\n${ANDROIDLICENSES_INTEGRATION_ANDROID_SDK_LICENSE}" > "$ANDROID_HOME/licenses/android-sdk-license"
     - echo -e "\n${ANDROIDLICENSES_INTEGRATION_ANDROID_SDK_PREVIEW_LICENSE}" > "$ANDROID_HOME/licenses/android-sdk-preview-license"
     - echo -e "\n${ANDROIDLICENSES_INTEGRATION_INTEL_ANDROID_EXTRA_LICENSE}" > "$ANDROID_HOME/licenses/intel-android-extra-license"
