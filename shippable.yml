@@ -7,7 +7,6 @@ env:
   global:
     - ANDROID_HOME=/opt/android-sdk
     - ANDROID_SDK=/opt/android-sdk/tools/bin
-    - SDK_DOWNLOAD=https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip
 
 build:
   ci:
