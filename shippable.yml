@@ -9,6 +9,7 @@ env:
 
 build:
   ci:
+    - mkdir /opt/android-sdk
     - export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin
     - echo $PATH
     - wget -nv -O android-sdk.zip https://dl.google.com/android/repository/tools_r25.2.5-linux.zip
