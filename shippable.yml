@@ -9,8 +9,9 @@ env:
 
 build:
   ci:
-    - PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin
-    - wget -O android-sdk.zip https://dl.google.com/android/repository/tools_r25.2.5-linux.zip
+    - export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin
+    - echo $PATH
+    - wget -q --show-progress -O android-sdk.zip https://dl.google.com/android/repository/tools_r25.2.5-linux.zip
     - unzip -a android-sdk.zip
     - echo 'y' | sdkmanager --licenses
     - mv tools $ANDROID_HOME/tools
