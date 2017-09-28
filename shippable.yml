@@ -11,7 +11,7 @@ env:
 build:
   ci:
     - mkdir -p $ANDROID_HOME/licenses
-    - " \"yes\" | $ANDROID_SDK/sdkmanager --licenses"
+    - yes | $ANDROID_SDK/sdkmanager --licenses
     # - echo -e "\n${android_sdk_license}" > "$ANDROID_HOME/licenses/android-sdk-license"
     # - echo -e "\n${sdk_preview_license}" > "$ANDROID_HOME/licenses/android-sdk-preview-license"
     # - echo -e "\n${intel_android_extra_license}" > "$ANDROID_HOME/licenses/intel-android-extra-license"
