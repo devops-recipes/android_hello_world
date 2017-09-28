@@ -13,5 +13,5 @@ build:
     - wget -O android-sdk.zip https://dl.google.com/android/repository/tools_r25.2.5-linux.zip
     - unzip -a android-sdk.zip
     - echo 'y' | sdkmanager --licenses
-    - mv /tools $ANDROID_HOME/tools
+    - mv tools $ANDROID_HOME/tools
     - gradle tasks
