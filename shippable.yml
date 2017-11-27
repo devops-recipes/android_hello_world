@@ -11,5 +11,6 @@ env:
 build:
   ci:
     - java -version
+    - gradle tasks
     
     
