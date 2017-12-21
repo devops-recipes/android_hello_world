@@ -1,5 +1,0 @@
-jobs:
-  - name: android_hello_world_runCI 
-    type: runCI
-    steps:
-      - IN: android-license-values
