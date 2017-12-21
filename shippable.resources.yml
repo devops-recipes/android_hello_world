@@ -1,4 +1,0 @@
-resources:
-  - name: android-license-values
-    type: integration
-    integration: android-licenses
