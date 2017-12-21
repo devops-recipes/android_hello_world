@@ -12,5 +12,6 @@ build:
   ci:
     - java -version
     - gradle tasks
+    - gradle assembleDebug
     
     
