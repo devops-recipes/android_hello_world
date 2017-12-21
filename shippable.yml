@@ -10,8 +10,13 @@ env:
 
 build:
   ci:
+    # Disable gradle daemon for CI
+    # https://docs.gradle.org/current/userguide/gradle_daemon.html#when_should_i_not_use_the_gradle_daemon
+    - mkdir -p ~/.gradle
+    - echo "org.gradle.daemon=false" >> ~/.gradle/gradle.properties
+    - echo "org.gradle.configureondemand=false" >> ~/.gradle/gradle.properties
+    - echo "org.gradle.parallel=false" >> ~/.gradle/gradle.properties
     - java -version
-    - gradle tasks
     - gradle assembleDebug
     
     
